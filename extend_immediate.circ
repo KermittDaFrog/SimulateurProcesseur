@@ -95,6 +95,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="78" y="83">ImmSrc</text>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="72" y="115">23:0</text>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="154" y="85">ExtImm</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="119" y="102">EXTEND</text>
       <circ-port height="8" pin="210,200" width="8" x="46" y="76"/>
       <circ-port height="8" pin="180,360" width="8" x="46" y="106"/>
       <circ-port height="10" pin="1000,580" width="10" x="175" y="75"/>
@@ -140,17 +141,47 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="out_width" val="32"/>
       <a name="type" val="sign"/>
     </comp>
-    <comp lib="0" loc="(930,430)" name="Probe">
-      <a name="facing" val="west"/>
+    <comp lib="0" loc="(690,610)" name="Probe">
+      <a name="facing" val="north"/>
     </comp>
-    <comp lib="0" loc="(680,260)" name="Bit Extender">
-      <a name="in_width" val="24"/>
-      <a name="out_width" val="8"/>
+    <comp lib="0" loc="(930,260)" name="Probe">
+      <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(180,360)" name="Pin">
       <a name="width" val="24"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Imm"/>
+    </comp>
+    <comp lib="0" loc="(830,430)" name="Bit Extender">
+      <a name="in_width" val="12"/>
+      <a name="out_width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(420,570)" name="Bit Extender">
+      <a name="in_width" val="24"/>
+      <a name="out_width" val="26"/>
+    </comp>
+    <comp lib="2" loc="(960,580)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="32"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(370,600)" name="Constant">
+      <a name="width" val="5"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="0" loc="(210,200)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ImmSrc"/>
+    </comp>
+    <comp lib="0" loc="(930,430)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="2" loc="(240,360)" name="Demultiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="2"/>
+      <a name="width" val="24"/>
+      <a name="enable" val="false"/>
     </comp>
     <comp lib="0" loc="(1000,580)" name="Pin">
       <a name="facing" val="west"/>
@@ -159,49 +190,19 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ExtImm"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(370,600)" name="Constant">
-      <a name="width" val="5"/>
-      <a name="value" val="0x2"/>
-    </comp>
-    <comp lib="0" loc="(930,260)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(420,570)" name="Bit Extender">
-      <a name="in_width" val="24"/>
-      <a name="out_width" val="26"/>
-    </comp>
-    <comp lib="0" loc="(690,610)" name="Probe">
-      <a name="facing" val="north"/>
-    </comp>
     <comp lib="0" loc="(830,260)" name="Bit Extender">
       <a name="out_width" val="32"/>
-    </comp>
-    <comp lib="2" loc="(240,360)" name="Demultiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="2"/>
-      <a name="width" val="24"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="0" loc="(210,200)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ImmSrc"/>
-    </comp>
-    <comp lib="0" loc="(830,430)" name="Bit Extender">
-      <a name="in_width" val="12"/>
-      <a name="out_width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(680,430)" name="Bit Extender">
-      <a name="in_width" val="24"/>
-      <a name="out_width" val="12"/>
     </comp>
     <comp lib="3" loc="(500,580)" name="Shifter">
       <a name="width" val="26"/>
     </comp>
-    <comp lib="2" loc="(960,580)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="width" val="32"/>
-      <a name="enable" val="false"/>
+    <comp lib="0" loc="(680,260)" name="Bit Extender">
+      <a name="in_width" val="24"/>
+      <a name="out_width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(680,430)" name="Bit Extender">
+      <a name="in_width" val="24"/>
+      <a name="out_width" val="12"/>
     </comp>
   </circuit>
 </project>
